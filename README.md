@@ -1,8 +1,11 @@
+### This is a fork of [MrRamych's](https://github.com/MrRamych/gradle-actions) work, just edited to use java 8
+
+
 # Github Actions for Gradle
 Execute  [Gradle](https://github.com/gradle/gradle) task using wrapper.
 
 ## Usage
-To create action in visual editor use `MrRamych/gradle-actions@master` repo.
+To create action in visual editor use `modmuss50/gradle-actions@master` repo.
 
 The `args` represent the task to be executed.
 
@@ -12,11 +15,11 @@ An example `main.workflow` file to run tests on push.
 ```
 workflow "Push" {
   on = "push"
-  resolves = ["Test"]
+  resolves = ["Build"]
 }
 
-action "Test" {
-  uses = "MrRamych/gradle-actions@master"
-  args = "test"
+action "Build" {
+  uses = "modmuss50/gradle-actions@master"
+  args = "build"
 }
 ```
